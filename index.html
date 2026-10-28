@@ -44,7 +44,7 @@ h1,h2,h3{font-family:var(--serif);line-height:1.08;letter-spacing:-.015em;font-w
 .strip{background:var(--green);color:#fff;text-align:center;font-weight:700;font-size:.92rem;padding:.5rem 10px}
 .strip a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 header.hd{background:var(--paper);border-bottom:1px solid rgba(30,49,57,.15);position:sticky;top:0;z-index:50}
-.hd .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:86px;gap:1rem}
+.hd .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:104px;gap:1rem}
 .nl,.nr{display:flex;gap:.2rem;align-items:center;list-style:none}
 .nr{justify-content:flex-end}
 .hd li{position:relative}
@@ -55,7 +55,7 @@ li:hover>.sub,li:focus-within>.sub{opacity:1;visibility:visible;transform:none}
 .sub a{display:block;padding:.7rem 1rem;text-decoration:none;font-weight:600;font-size:.93rem}
 .sub a:hover{background:var(--sand)}
 .logo{display:flex;flex-direction:column;align-items:center;text-decoration:none;line-height:1}
-.logo svg{width:40px;height:40px;margin-bottom:.25rem}
+.logo img{height:84px;width:auto}footer .logo img{height:120px}
 .logo b{font:800 1.2rem var(--serif);letter-spacing:-.01em}
 .logo small{font:700 .62rem var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--slate);margin-top:.25rem}
 .burger{display:none;justify-self:end;background:none;border:2px solid var(--slate-d);border-radius:6px;width:46px;height:42px;cursor:pointer}
@@ -237,16 +237,6 @@ footer .badge{width:92px;height:92px;border-radius:6px}
 </head>
 <body>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="mark" viewBox="0 0 48 48">
-    <circle cx="24" cy="24" r="22" fill="#496570"/>
-    <path d="M4 30c5-8 9 6 14 0s9 6 14 0 7 4 12 -2v16a22 22 0 0 1-40 0z" fill="#eb1c24" opacity=".0"/>
-    <path d="M10 28c4-5 7 4 11 0s7 4 11 0 5 2 7 0" fill="none" stroke="#fffaf2" stroke-width="3" stroke-linecap="round"/>
-    <path d="M10 35c4-5 7 4 11 0s7 4 11 0 5 2 7 0" fill="none" stroke="#edba8d" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="24" cy="16" r="5" fill="#eb1c24"/>
-  </symbol>
-</svg>
-
 <div class="strip">Call Us Today! <a href="tel:+17808094551">(780) 809-4551</a> &nbsp;·&nbsp; Open 24/7/365</div>
 
 <header class="hd" id="hd">
@@ -258,7 +248,7 @@ footer .badge{width:92px;height:92px;border-radius:6px}
       </li>
       <li><a href="#about">About</a></li>
     </ul>
-    <a class="logo" href="#top" aria-label="Sherwood Park Carpet Cleaning home"><svg><use href="#mark"/></svg><b>Sherwood Park</b><small>Carpet Cleaning</small></a>
+    <a class="logo" href="#top" aria-label="Sherwood Park Carpet Cleaning home"><img src="images/logo-stacked.png" alt="Sherwood Park Carpet Cleaning" width="673" height="426"></a>
     <button class="burger" aria-label="Menu" onclick="document.getElementById('hd').classList.toggle('open')"><span></span></button>
     <ul class="nr">
       <li><a href="#quote">Contact</a></li>
@@ -285,7 +275,7 @@ footer .badge{width:92px;height:92px;border-radius:6px}
     <div class="trio">
       <figure class="pol a"><img src="images/6441305_orig.jpg" alt="Steam cleaning professional staff"><figcaption>Steam Cleaning Professional Staff</figcaption></figure>
       <figure class="pol b"><img src="images/1237074_orig.jpg" alt="Affordable price, high quality carpet care"><figcaption>Affordable Price High Quality Carpet Care</figcaption></figure>
-      <figure class="pol c"><img src="images/883668_orig.jpg" alt="Best quality, long lasting clean"><figcaption>Best Quality Long Lasting Clean</figcaption></figure>
+      <figure class="pol c"><img src="images/towel.jpg" alt="Best quality, long lasting clean" style="object-position:center 40%"><figcaption>Best Quality Long Lasting Clean</figcaption></figure>
     </div>
   </div>
 </div>
@@ -303,7 +293,7 @@ footer .badge{width:92px;height:92px;border-radius:6px}
       <h3>Carpet Cleaning</h3>
       <p>We use steam cleaning equipment to bring your carpet back to life. Our customers' reviews say the rest.</p>
     </div>
-    <img src="images/5612196_orig.jpg" alt="Steam cleaning wand on carpet">
+    <img src="images/wand.jpg" alt="Steam cleaning wand on carpet">
   </article>
   <article class="half r" id="upholstery">
     <div>
@@ -311,7 +301,7 @@ footer .badge{width:92px;height:92px;border-radius:6px}
       <h3>Upholstery Cleaning</h3>
       <p>Couches and chairs get cleaned too. We can handle any fibre type.</p>
     </div>
-    <img src="images/4854105_orig.jpg" alt="Family relaxing on a sofa and clean carpet">
+    <img src="images/sofa.jpg" alt="Upholstery being steam cleaned on a sofa" style="object-position:center 35%">
   </article>
 </div>
 <div class="also">
@@ -371,7 +361,7 @@ footer .badge{width:92px;height:92px;border-radius:6px}
         <p>It's the question we get asked most, and the answer depends on what spilled. Every stain needs its own approach.</p>
         <p>The best move is to call a professional first. If you can't, there are DIY tips at <a href="https://www.clean-organized-family-home.com" target="_blank" rel="noopener">Clean Organized Family Home</a>. And if the DIY route doesn't work out, give us a call.</p>
       </div>
-      <div class="ph"><img src="images/discount-carpet-cleaning_orig.jpg" alt="Gloved hand dabbing a stain on carpet"><em>Dab. Don't rub.</em></div>
+      <div class="ph"><img src="images/stain.jpg" alt="Gloved hand dabbing a stain on carpet"><em>Dab. Don't rub.</em></div>
     </div>
   </div>
 </section>
@@ -424,7 +414,7 @@ footer .badge{width:92px;height:92px;border-radius:6px}
   <div class="wrap">
     <div class="fg">
       <div>
-        <a class="logo" href="#top"><svg><use href="#mark"/></svg><b>Sherwood Park</b><small>Carpet Cleaning</small></a>
+        <a class="logo" href="#top"><img src="images/logo-stacked-white.png" alt="Sherwood Park Carpet Cleaning" width="673" height="426"></a>
         <p>Affordable, local carpet and upholstery cleaning for Sherwood Park and the surrounding areas.</p>
         <img class="badge" src="images/best-carpet-cleaning-sherwood-park.jpeg" alt="Best in Edmonton badge">
       </div>
