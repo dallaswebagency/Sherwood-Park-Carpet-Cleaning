@@ -7,415 +7,331 @@
 <meta name="description" content="Affordable steam carpet cleaning, upholstery cleaning, tile and grout, rugs and pet odor removal in Sherwood Park, Alberta. Open 24/7/365. Get a free, no-obligation quote.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+/* palette pulled from the original site: sunrise peach, slate blue, quote-button red, call-icon green */
 :root{
-  --oat:#f4ede0;
-  --oat-2:#ebe2d0;
-  --ink:#10262b;
-  --ink-2:#1b3c43;
-  --teal:#0f6b6b;
-  --aqua:#cfe6e1;
-  --tang:#ee6a33;
-  --tang-d:#d4561f;
-  --white:#fffdf8;
-  --line:rgba(16,38,43,.22);
-  --r:14px;
-  --display:'Bricolage Grotesque',system-ui,sans-serif;
-  --body:'Figtree',system-ui,sans-serif;
+  --sand:#f7ebdb;
+  --sand-2:#f0dcc3;
+  --peach:#edba8d;
+  --peach-d:#e8a481;
+  --slate:#496570;
+  --slate-d:#1e3139;
+  --red:#eb1c24;
+  --red-d:#b9131a;
+  --green:#3fa535;
+  --paper:#fffaf2;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Manrope',system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{font-family:var(--body);background:var(--oat);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--sans);background:var(--sand);color:var(--slate-d);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 a{color:inherit}
-.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
-h1,h2,h3{font-family:var(--display);line-height:1.04;letter-spacing:-.02em}
-.btn{display:inline-flex;align-items:center;gap:.6rem;font:700 1rem var(--body);padding:.95rem 1.5rem;border-radius:999px;text-decoration:none;border:2px solid var(--ink);transition:transform .2s,background .2s,color .2s,box-shadow .2s;cursor:pointer}
-.btn-p{background:var(--tang);border-color:var(--tang);color:#fff;box-shadow:0 5px 0 var(--tang-d)}
-.btn-p:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--tang-d)}
-.btn-o{background:transparent;color:var(--ink)}
-.btn-o:hover{background:var(--ink);color:var(--oat)}
-.tag{display:inline-block;font:700 .78rem var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
-.stitch{border:2px dashed var(--line);border-radius:var(--r)}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);line-height:1.08;letter-spacing:-.015em;font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font:800 1rem var(--sans);padding:1rem 1.8rem;border-radius:6px;text-decoration:none;border:2px solid transparent;transition:.2s;cursor:pointer;letter-spacing:.01em}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-d)}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:#2f8828}
+.btn-line{border-color:var(--slate-d);color:var(--slate-d)}
+.btn-line:hover{background:var(--slate-d);color:var(--sand)}
+.kicker{font:800 .78rem var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
 
-/* top bar */
-.top{background:var(--ink);color:var(--oat);font-size:.9rem}
-.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.55rem 0}
-.top a{text-decoration:none;font-weight:700;color:#ffb48f}
-.live{display:inline-flex;align-items:center;gap:.55rem}
-.live i{width:9px;height:9px;border-radius:50%;background:#5fe08f;box-shadow:0 0 0 0 rgba(95,224,143,.7);animation:pulse 2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(95,224,143,0)}100%{box-shadow:0 0 0 0 rgba(95,224,143,0)}}
-
-/* header */
-header.nav{position:sticky;top:0;z-index:50;background:rgba(244,237,224,.94);backdrop-filter:blur(8px);border-bottom:2px dashed var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
-.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
-.brand svg{width:46px;height:46px;flex:none}
-.brand b{display:block;font:800 1.15rem/1 var(--display);letter-spacing:-.01em}
-.brand small{display:block;font:600 .68rem var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-top:.2rem}
-.menu{display:flex;align-items:center;gap:.4rem;list-style:none}
-.menu>li{position:relative}
-.menu>li>a{display:block;padding:.6rem .9rem;text-decoration:none;font-weight:600;font-size:.97rem;border-radius:8px}
-.menu>li>a:hover{background:var(--oat-2)}
-.sub{position:absolute;top:100%;left:0;min-width:220px;background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:.4rem;list-style:none;opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s;box-shadow:6px 6px 0 var(--ink)}
-.menu li:hover .sub,.menu li:focus-within .sub{opacity:1;visibility:visible;transform:none}
-.sub a{display:block;padding:.55rem .8rem;text-decoration:none;border-radius:8px;font-weight:600;font-size:.95rem}
-.sub a:hover{background:var(--aqua)}
-.nav .btn{padding:.7rem 1.2rem;font-size:.95rem}
-.burger{display:none;background:none;border:2px solid var(--ink);border-radius:10px;width:46px;height:42px;cursor:pointer}
-.burger span,.burger span::before,.burger span::after{display:block;width:20px;height:2px;background:var(--ink);margin:auto;position:relative}
+/* header: centred logo, nav split either side */
+.strip{background:var(--green);color:#fff;text-align:center;font-weight:700;font-size:.92rem;padding:.5rem 10px}
+.strip a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+header.hd{background:var(--paper);border-bottom:1px solid rgba(30,49,57,.15);position:sticky;top:0;z-index:50}
+.hd .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:86px;gap:1rem}
+.nl,.nr{display:flex;gap:.2rem;align-items:center;list-style:none}
+.nr{justify-content:flex-end}
+.hd li{position:relative}
+.hd li>a:not(.btn){display:block;padding:.5rem .85rem;text-decoration:none;font-weight:700;font-size:.95rem}
+.hd li>a:not(.btn):hover{color:var(--red)}
+.sub{position:absolute;top:100%;left:0;background:var(--paper);min-width:210px;border-top:3px solid var(--red);box-shadow:0 14px 30px rgba(30,49,57,.18);list-style:none;opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s}
+li:hover>.sub,li:focus-within>.sub{opacity:1;visibility:visible;transform:none}
+.sub a{display:block;padding:.7rem 1rem;text-decoration:none;font-weight:600;font-size:.93rem}
+.sub a:hover{background:var(--sand)}
+.logo{display:flex;flex-direction:column;align-items:center;text-decoration:none;line-height:1}
+.logo svg{width:40px;height:40px;margin-bottom:.25rem}
+.logo b{font:800 1.2rem var(--serif);letter-spacing:-.01em}
+.logo small{font:700 .62rem var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--slate);margin-top:.25rem}
+.burger{display:none;justify-self:end;background:none;border:2px solid var(--slate-d);border-radius:6px;width:46px;height:42px;cursor:pointer}
+.burger span,.burger span::before,.burger span::after{display:block;width:20px;height:2px;background:var(--slate-d);margin:auto;position:relative}
 .burger span::before,.burger span::after{content:"";position:absolute;left:0}
 .burger span::before{top:-6px}.burger span::after{top:6px}
 
-/* hero */
-.hero{padding:64px 0 90px;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(circle at 85% 20%,rgba(207,230,225,.9),transparent 42%),
-  repeating-linear-gradient(90deg,transparent 0 22px,rgba(16,38,43,.035) 22px 23px);pointer-events:none}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:.6rem;background:var(--white);border:2px solid var(--ink);padding:.4rem 1rem;border-radius:999px;font-weight:700;font-size:.85rem;margin-bottom:1.5rem}
-.eyebrow i{width:9px;height:9px;border-radius:50%;background:#2fbf6a}
-.hero h1{font-size:clamp(2.6rem,5.4vw,4.7rem);font-weight:800}
-.hero h1 em{font-style:normal;position:relative;white-space:nowrap;color:var(--teal)}
-.hero h1 em svg{position:absolute;left:-2%;bottom:-.22em;width:104%;height:.3em;overflow:visible}
-.hero p.lead{font-size:1.18rem;max-width:34rem;margin:1.6rem 0 2rem;color:#27454c}
-.hero .cta{display:flex;flex-wrap:wrap;gap:1rem}
-.ticks{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;margin-top:2rem;list-style:none;font-weight:600;font-size:.95rem}
-.ticks li::before{content:"";display:inline-block;width:.9rem;height:.9rem;margin-right:.5rem;vertical-align:-.1rem;background:var(--teal);border-radius:50%;
-  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3L13 4.5' fill='none' stroke='black' stroke-width='2.4'/%3E%3C/svg%3E") center/cover;
-  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3L13 4.5' fill='none' stroke='black' stroke-width='2.4'/%3E%3C/svg%3E") center/cover}
+/* hero: the old site's sunrise gradient, used full-bleed */
+.hero{background:var(--peach) url(images/Orange-Blue.jpg) center/cover no-repeat;position:relative;padding:84px 0 0;text-align:center}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:140px;background:linear-gradient(transparent,var(--sand))}
+.hero .in{position:relative;z-index:2}
+.hero .kicker{color:var(--slate-d);display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,250,242,.7);padding:.4rem 1rem;border-radius:99px}
+.hero .kicker i{width:9px;height:9px;border-radius:50%;background:var(--green)}
+.hero h1{font-size:clamp(2.5rem,6vw,5.2rem);max-width:15ch;margin:1.3rem auto 0;font-weight:800;color:var(--slate-d)}
+.hero h1 em{font-style:italic;font-weight:600;color:var(--red)}
+.hero p.lead{max-width:40rem;margin:1.5rem auto 2rem;font-size:1.2rem;color:#2a3f47;font-weight:500}
+.hero .cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.facts{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem 2.2rem;margin:2rem 0 0;list-style:none;font-weight:700;font-size:.95rem;color:var(--slate-d)}
+.facts li::before{content:"✓";color:var(--green);font-weight:800;margin-right:.45rem}
 
-.collage{position:relative;height:540px}
-.c-main{position:absolute;right:0;top:0;width:86%;height:400px;object-fit:cover;border:3px solid var(--ink);
-  clip-path:polygon(0 0,calc(100% - 70px) 0,100% 70px,100% 100%,0 100%);box-shadow:none;background:var(--ink)}
-.c-main-wrap{position:absolute;right:-14px;top:14px;width:86%;height:400px;background:var(--tang);clip-path:polygon(0 0,calc(100% - 70px) 0,100% 70px,100% 100%,0 100%)}
-.c-small{position:absolute;left:0;bottom:0;width:210px;height:210px;border-radius:50%;object-fit:cover;object-position:center 30%;border:6px solid var(--oat);outline:3px solid var(--ink)}
-.c-card{position:absolute;right:6px;bottom:20px;width:62%;background:var(--white);border:3px solid var(--ink);border-radius:var(--r);padding:1.1rem 1.3rem;box-shadow:7px 7px 0 var(--ink);transform:rotate(1.6deg)}
-.c-card h3{font-size:1.2rem;margin-bottom:.5rem}
-.c-card ul{list-style:none;font-size:.95rem;font-weight:500}
-.c-card li{padding:.28rem 0;border-top:1px dashed var(--line)}
-.c-card li:first-child{border-top:0}
-.c-card li b{color:var(--teal)}
-.sticker{position:absolute;left:12px;top:-10px;width:128px;height:128px;z-index:3}
-.sticker svg{width:100%;height:100%;animation:spin 26s linear infinite}
-.sticker .mid{position:absolute;inset:0;display:grid;place-items:center;font:800 1.5rem var(--display);color:var(--ink);line-height:.9;text-align:center}
-@keyframes spin{to{transform:rotate(360deg)}}
-
-/* marquee */
-.band{background:var(--tang);color:#fff;border-block:3px solid var(--ink);overflow:hidden;white-space:nowrap}
-.band .row{display:inline-flex;animation:slide 32s linear infinite}
-.band span{font:800 1.5rem var(--display);padding:.9rem 1.4rem;display:inline-flex;align-items:center;gap:2.8rem;letter-spacing:-.01em}
-.band span::after{content:"✺";font-size:1.1rem;color:var(--ink)}
-@keyframes slide{to{transform:translateX(-50%)}}
+.trio{position:relative;z-index:3;display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:34px;align-items:end;margin-top:64px;padding-bottom:0;transform:translateY(60px)}
+.pol{background:var(--paper);padding:12px 12px 14px;box-shadow:0 18px 40px rgba(30,49,57,.3);position:relative}
+.pol img{width:100%;object-fit:cover}
+.pol figcaption{font:700 .86rem var(--sans);padding-top:.7rem;color:var(--slate-d);text-align:center}
+.pol::before{content:"";position:absolute;top:-14px;left:50%;width:90px;height:28px;margin-left:-45px;background:rgba(237,186,141,.85);transform:rotate(-3deg)}
+.pol.a{transform:rotate(-3deg)}.pol.a img{height:250px}
+.pol.b img{height:310px}
+.pol.c{transform:rotate(2.5deg)}.pol.c img{height:250px}
 
 /* sections */
-section{padding:100px 0}
-.sec-h{display:grid;grid-template-columns:auto 1fr;gap:1rem 2rem;align-items:end;margin-bottom:3rem}
-.num{font:800 5.5rem/0.8 var(--display);color:transparent;-webkit-text-stroke:2px var(--ink);opacity:.9}
-.sec-h h2{font-size:clamp(2rem,3.9vw,3.2rem);max-width:21ch}
+section{padding:110px 0}
+.hero+section{padding-top:150px}
+.sh{max-width:46rem;margin-bottom:3.4rem}
+.sh h2{font-size:clamp(2rem,4vw,3.3rem);margin-top:.8rem}
 
-/* services */
-.svc{display:grid;grid-template-columns:repeat(12,1fr);gap:28px}
-.card{background:var(--white);border:3px solid var(--ink);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:8px 8px 0 var(--ink)}
-.card .ph{position:relative;height:300px;overflow:hidden;background:var(--ink)}
-.card .ph img{width:100%;height:100%;object-fit:cover}
-.card .ph b{position:absolute;left:16px;top:16px;background:var(--oat);border:2px solid var(--ink);border-radius:999px;padding:.25rem .8rem;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
-.card .tx{padding:1.6rem 1.8rem 1.9rem}
-.card h3{font-size:1.9rem;margin-bottom:.7rem}
-.card p{color:#2b4a51}
-.card.a{grid-column:span 7}.card.b{grid-column:span 5;margin-top:56px}
-.also{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.3fr;gap:28px;margin-top:22px}
-.also .l{padding:1.8rem;background:var(--aqua);border:2px dashed var(--ink);border-radius:18px}
-.also .l h3{font-size:1.5rem;margin-bottom:1rem}
-.pills{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none}
-.pills li{background:var(--white);border:2px solid var(--ink);border-radius:999px;padding:.4rem 1rem;font-weight:700;font-size:.95rem}
-.pills li::before{content:"→ ";color:var(--tang)}
-.also .r{padding:1.8rem;border:2px dashed var(--line);border-radius:18px;display:flex;flex-direction:column;justify-content:center;gap:.5rem}
-.also .r p{font-size:1.02rem}
-.also .r a{font-weight:700;color:var(--teal);text-underline-offset:4px}
+/* services: split */
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.half{padding:70px max(20px,4vw);display:flex;flex-direction:column;justify-content:space-between;gap:2rem;position:relative}
+.half.l{background:var(--slate);color:#fff;padding-left:max(20px,calc((100vw - 1180px)/2))}
+.half.r{background:var(--peach);color:var(--slate-d);padding-right:max(20px,calc((100vw - 1180px)/2))}
+.half .no{font:800 .8rem var(--sans);letter-spacing:.2em;text-transform:uppercase;opacity:.8}
+.half h3{font-size:clamp(2rem,3.6vw,3rem);margin:.5rem 0 .9rem}
+.half p{max-width:26rem;font-size:1.05rem}
+.half img{width:100%;max-width:440px;height:240px;object-fit:cover;border:8px solid var(--paper);box-shadow:0 14px 30px rgba(0,0,0,.25)}
+.half.l img{transform:rotate(-1.5deg)}.half.r img{transform:rotate(1.5deg);margin-left:auto}
+.also{background:var(--slate-d);color:var(--sand);padding:34px 0}
+.also .wrap{display:flex;align-items:center;gap:1rem 2.4rem;flex-wrap:wrap;justify-content:space-between}
+.also ul{display:flex;gap:.4rem 1.6rem;flex-wrap:wrap;list-style:none;font:700 1.35rem var(--serif)}
+.also li+li::before{content:"/";color:var(--red);margin-right:1.6rem;font-weight:800}
+.also p{font-size:.95rem;max-width:30rem;opacity:.92}
+.also a{color:var(--peach);font-weight:700;text-underline-offset:3px}
 
-/* stats */
-.stats{padding:0;background:var(--ink) url(images/Orange-Blue.jpg) center/cover;position:relative;color:var(--oat)}
-.stats::before{content:"";position:absolute;inset:0;background:rgba(16,38,43,.82)}
-.stats .wrap{position:relative;display:grid;grid-template-columns:repeat(4,1fr)}
-.stat{padding:56px 26px;border-left:2px dashed rgba(244,237,224,.3)}
-.stat:first-child{border-left:0}
-.stat b{display:block;font:800 clamp(2.2rem,4vw,3.4rem)/1 var(--display);color:#ffb48f;margin-bottom:.5rem}
-.stat span{font-size:1rem;opacity:.9}
-
-/* tips */
-.tips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start}
-.tip{padding:2rem 1.8rem 2.2rem;background:var(--white);position:relative}
-.tip:nth-child(2){margin-top:44px}.tip:nth-child(3){margin-top:88px}
-.tip .n{font:800 4.2rem/1 var(--display);color:var(--tang);display:block;margin-bottom:.8rem}
-.tip h3{font-size:1.5rem;margin-bottom:.7rem}
-.tip p{color:#2b4a51}
-.tips-foot{margin-top:56px;display:flex;justify-content:center}
-.tips-foot img{width:min(500px,100%);height:auto;object-fit:cover;border:3px solid var(--ink);border-radius:12px;transform:rotate(-2deg)}
-.tips-foot p{font-family:var(--display);font-size:1.5rem;font-weight:700;line-height:1.2;max-width:30ch}
+/* tips: timeline */
+.tips .top{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:end;margin-bottom:4rem}
+.tips .top img{width:100%;max-width:240px;justify-self:end;border:8px solid var(--paper);box-shadow:0 14px 30px rgba(30,49,57,.2);transform:rotate(1.5deg)}
+.tl{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
+.tl::before{content:"";position:absolute;left:0;right:0;top:27px;height:3px;background:repeating-linear-gradient(90deg,var(--slate) 0 10px,transparent 10px 18px)}
+.step{position:relative;padding:0 36px 0 0}
+.dot{width:56px;height:56px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font:800 1.5rem var(--serif);position:relative;z-index:1;margin-bottom:1.4rem;box-shadow:0 0 0 8px var(--sand)}
+.step h3{font-size:1.55rem;margin-bottom:.6rem}
+.step p{color:#34505a}
 
 /* bacteria */
-.bact{background:var(--ink);color:var(--oat);position:relative;overflow:hidden}
-.bact .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
-.bact .ph{position:relative}
-.bact .ph img{width:100%;height:440px;object-fit:cover;border-radius:var(--r);filter:grayscale(.55) contrast(1.05) brightness(.9);border:2px solid rgba(244,237,224,.5)}
-.bact .ph::after{content:"";position:absolute;inset:0;border-radius:var(--r);background:linear-gradient(160deg,rgba(15,107,107,.5),transparent 60%),repeating-linear-gradient(0deg,rgba(0,0,0,.0) 0 3px,rgba(16,38,43,.18) 3px 4px)}
-.bact .big{position:absolute;right:-18px;bottom:-26px;z-index:2;background:var(--tang);color:#fff;border:3px solid var(--oat);border-radius:var(--r);padding:1rem 1.3rem;transform:rotate(-3deg);max-width:230px}
-.bact .big b{display:block;font:800 2.6rem/1 var(--display)}
-.bact .big span{font-size:.9rem;font-weight:600;line-height:1.3;display:block;margin-top:.3rem}
-.bact .tag{color:#ffb48f}
-.bact h2{font-size:clamp(2rem,3.8vw,3.1rem);margin:.7rem 0 1.4rem}
-.bact p{color:#d7ddd4;margin-bottom:1rem}
-.bugs{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.6rem 0;list-style:none}
-.bugs li{font:700 1.25rem var(--display);border:2px solid #ffb48f;color:#ffb48f;border-radius:10px;padding:.3rem 1rem}
-.src{font-size:.88rem;opacity:.75}
-.src a{text-underline-offset:3px}
+.bact{background:var(--peach);border-block:1px solid rgba(30,49,57,.2)}
+.bact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.giant{position:relative;text-align:center}
+.giant b{display:block;font:800 clamp(6rem,14vw,11rem)/.85 var(--serif);color:var(--slate-d);letter-spacing:-.05em}
+.giant span{display:block;font:600 italic 2rem var(--serif);color:var(--red);margin-top:.2rem}
+.giant p{font-weight:700;max-width:18rem;margin:1rem auto 0;font-size:.95rem}
+.giant img{width:220px;height:220px;border-radius:50%;object-fit:cover;margin:2.2rem auto 0;border:8px solid var(--paper);box-shadow:0 14px 30px rgba(30,49,57,.25)}
+.bact h2{font-size:clamp(2rem,3.8vw,3.1rem);margin:.8rem 0 1.4rem}
+.bact p{margin-bottom:1rem;color:#2a3f47}
+.bugs{font:700 italic 1.9rem/1.3 var(--serif);color:var(--red);margin:1.2rem 0;border-left:5px solid var(--red);padding-left:1.1rem}
+.bugs s{text-decoration:none;color:var(--slate-d);margin:0 .5rem;font-style:normal}
+.src{font-size:.88rem;opacity:.8}
 
-/* stains */
-.stain .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:60px;align-items:center}
+/* stains: swatches */
+.sw{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:3.4rem}
+.swatch{background:var(--paper);padding:10px 10px 16px;box-shadow:0 8px 20px rgba(30,49,57,.12);text-align:center;font:700 1.1rem var(--serif)}
+.swatch div{height:130px;margin-bottom:.8rem;background:
+  radial-gradient(circle at var(--x) var(--y),var(--c) 0 var(--s),transparent calc(var(--s) + 1px)),
+  radial-gradient(circle at calc(var(--x) + 22%) calc(var(--y) + 18%),var(--c) 0 12px,transparent 13px),
+  repeating-linear-gradient(45deg,#e4d6c2 0 3px,#ddcdb6 3px 6px)}
+.stain .row{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.stain .row p{margin-bottom:1rem;color:#34505a}
+.stain .row a{color:var(--red);font-weight:700;text-underline-offset:3px}
 .stain .ph{position:relative}
-.stain .ph img{width:100%;height:430px;object-fit:cover;border:3px solid var(--ink);border-radius:var(--r);transform:rotate(-1.5deg)}
-.stain .ph .note{position:absolute;right:-14px;bottom:26px;background:var(--tang);color:#fff;border:3px solid var(--ink);padding:.7rem 1.2rem;border-radius:10px;font:800 1.45rem var(--display);transform:rotate(3deg);box-shadow:5px 5px 0 var(--ink)}
-.stain h2{font-size:clamp(1.9rem,3.5vw,2.9rem);margin:.8rem 0 1.2rem}
-.stain p{color:#2b4a51;margin-bottom:1rem}
-.tiles{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:1.6rem 0}
-.tiles div{display:flex;align-items:center;gap:.9rem;background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:.9rem 1.1rem;font:700 1.05rem var(--display)}
-.tiles i{width:22px;height:22px;border-radius:50%;border:2px solid var(--ink);flex:none}
-.stain .lnk{font-weight:700;color:var(--teal);text-underline-offset:4px}
+.stain .ph img{width:100%;height:380px;object-fit:cover}
+.stain .ph::before{content:"";position:absolute;inset:18px -18px -18px 18px;background:var(--red);z-index:-1}
+.stain .ph{z-index:0}
+.stain .ph em{position:absolute;left:-18px;bottom:28px;background:var(--slate-d);color:#fff;padding:.6rem 1.2rem;font:700 italic 1.5rem var(--serif)}
 
 /* quote */
-.quote{background:var(--aqua);border-block:3px solid var(--ink)}
-.quote .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
-.quote h2{font-size:clamp(2.2rem,4.4vw,3.8rem);margin:.8rem 0 1.2rem}
-.quote .info p{margin-bottom:1.4rem;max-width:30rem}
-.bigtel{display:inline-block;font:800 2.2rem var(--display);text-decoration:none;border-bottom:4px solid var(--tang);line-height:1.1}
-.badge{margin-top:2.2rem;display:flex;align-items:center;gap:1rem;font-size:.9rem;font-weight:600}
-.badge img{width:86px;height:86px;border-radius:50%;object-fit:cover;border:2px solid var(--ink)}
-.ticket{background:var(--white);border:3px solid var(--ink);border-radius:18px;padding:2rem 2rem 2.2rem;position:relative;box-shadow:10px 10px 0 var(--ink)}
-.ticket::before,.ticket::after{content:"";position:absolute;top:84px;width:26px;height:26px;border-radius:50%;background:var(--aqua);border:3px solid var(--ink)}
-.ticket::before{left:-16px;clip-path:inset(0 0 0 50%)}.ticket::after{right:-16px;clip-path:inset(0 50% 0 0)}
-.ticket header{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px dashed var(--line);padding-bottom:1.1rem;margin-bottom:1.4rem}
-.ticket header h3{font-size:1.5rem}
-.ticket header small{font-weight:600;color:#4b666b;font-size:.82rem}
-.f2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.fld{margin-bottom:16px}
-.fld label{display:block;font-weight:700;font-size:.88rem;margin-bottom:.35rem}
-.fld input,.fld select,.fld textarea{width:100%;font:500 1rem var(--body);padding:.8rem .9rem;border:2px solid var(--ink);border-radius:10px;background:var(--oat);color:var(--ink)}
-.fld input:focus,.fld select:focus,.fld textarea:focus{outline:3px solid var(--tang);outline-offset:1px}
-.fld textarea{min-height:100px;resize:vertical}
-.ticket .btn{width:100%;justify-content:center;font-size:1.1rem}
+.quote{background:var(--slate);color:#fff;position:relative}
+.quote .head{text-align:center;max-width:40rem;margin:0 auto 3rem}
+.quote .head .kicker{color:var(--peach)}
+.quote .head h2{font-size:clamp(2.2rem,4.6vw,3.8rem);margin:.8rem 0 1rem}
+.quote .head p{opacity:.92}
+.form{background:var(--paper);color:var(--slate-d);padding:2.4rem;max-width:980px;margin:0 auto;box-shadow:0 24px 50px rgba(0,0,0,.28);border-top:6px solid var(--red)}
+.form .req{font-size:.85rem;font-weight:600;color:var(--slate);margin-bottom:1.4rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.fld{margin-bottom:18px}
+.fld label{display:block;font-weight:800;font-size:.84rem;margin-bottom:.35rem;text-transform:uppercase;letter-spacing:.06em}
+.fld input,.fld select,.fld textarea{width:100%;font:500 1rem var(--sans);padding:.85rem .9rem;border:1.5px solid rgba(30,49,57,.45);border-radius:4px;background:#fff;color:var(--slate-d)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:3px solid rgba(235,28,36,.35);border-color:var(--red)}
+.fld textarea{min-height:110px;resize:vertical}
+.form .btn{width:100%;font-size:1.15rem;padding:1.1rem}
+.callrow{text-align:center;margin-top:2rem;font-weight:700}
+.callrow a{font:800 1.8rem var(--serif);text-decoration:none;display:block;color:var(--peach);margin-top:.2rem}
 
 /* closing */
-.close{position:relative;color:#fff;background:var(--ink) url(images/Orange-Blue.jpg) center/cover;text-align:center;overflow:hidden}
-.close::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,38,43,.55),rgba(16,38,43,.85))}
-.close .wrap{position:relative;max-width:860px}
-.close h2{font-size:clamp(2.6rem,6vw,5rem);margin-bottom:1.4rem}
-.close p{font-size:1.15rem;max-width:44rem;margin:0 auto 1rem;color:#f1ece0}
-.close .cta{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem}
-.close .btn-o{border-color:#fff;color:#fff}
-.close .btn-o:hover{background:#fff;color:var(--ink)}
+.close{background:var(--sand-2);text-align:center}
+.close h2{font-size:clamp(2.6rem,6.4vw,5.4rem);max-width:14ch;margin:0 auto 1.6rem;font-weight:800}
+.close h2 em{font-style:italic;font-weight:600;color:var(--red)}
+.close p{max-width:42rem;margin:0 auto 1rem;font-size:1.12rem;color:#2a3f47}
+.close .cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
 
 /* footer */
-footer{background:#0b1b1f;color:#cdd6d2;padding:72px 0 0}
-.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:48px;padding-bottom:56px}
-footer .brand b{color:var(--oat)}footer .brand small{color:#7fd0c8}
-footer p{margin:1.1rem 0;font-size:.97rem;max-width:26rem}
-footer h4{font:800 .8rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:#ffb48f;margin-bottom:1.1rem}
-footer ul{list-style:none}
-footer li{margin-bottom:.6rem}
+footer{background:var(--slate-d);color:#c9d3d6;padding:70px 0 0}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:44px;padding-bottom:50px}
+footer .logo{align-items:flex-start}
+footer .logo b{color:#fff}footer .logo small{color:var(--peach)}
+footer p{font-size:.96rem;margin:1.1rem 0;max-width:24rem}
+footer h4{font:800 .78rem var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--peach);margin-bottom:1.1rem}
+footer ul{list-style:none}footer li{margin-bottom:.6rem}
 footer a{text-decoration:none}footer a:hover{color:#fff;text-decoration:underline}
-.fbadge{display:flex;gap:1rem;align-items:center;margin-top:1.2rem}
-.fbadge img{width:92px;height:92px;border-radius:12px}
-.legal{border-top:2px dashed rgba(244,237,224,.18);padding:1.4rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.9rem}
-.legal a{color:#ffb48f;font-weight:700}
-
+footer .badge{width:92px;height:92px;border-radius:6px}
+.fphone{font:800 1.6rem var(--serif);color:#fff}
+.legal{border-top:1px solid rgba(255,255,255,.16);padding:1.3rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.9rem}
+.legal a{color:var(--peach);font-weight:700}
 .callbar{display:none}
 
 @media (max-width:980px){
-  .hero .wrap,.bact .wrap,.stain .wrap,.quote .wrap{grid-template-columns:1fr;gap:48px}
-  .collage{height:520px;max-width:560px;margin-inline:auto;width:100%}
-  .card.a,.card.b{grid-column:1/-1}.card.b{margin-top:0}
-  .also{grid-template-columns:1fr}
-  .stats .wrap{grid-template-columns:1fr 1fr}.stat:nth-child(3){border-left:0}.stat{border-top:2px dashed rgba(244,237,224,.3)}.stat:nth-child(-n+2){border-top:0}
-  .tips-grid{grid-template-columns:1fr}.tip:nth-child(n){margin-top:0}
-  .tips-foot{grid-template-columns:1fr}
-  .fgrid{grid-template-columns:1fr 1fr}
-  .menu{position:fixed;inset:78px 0 auto 0;background:var(--oat);flex-direction:column;align-items:stretch;padding:1rem 20px 1.4rem;border-bottom:3px solid var(--ink);display:none;gap:0}
-  .menu.open{display:flex}
-  .sub{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;padding:0 0 0 1rem;background:none}
-  .burger{display:block}.nav .btn.hd{display:none}
+  .hd .wrap{grid-template-columns:1fr auto;min-height:76px}
+  .logo{align-items:flex-start;order:-1}
+  .burger{display:block}
+  .nl,.nr{display:none}
+  .hd.open .wrap{grid-template-columns:1fr auto}
+  .hd.open .nl,.hd.open .nr{display:flex;grid-column:1/-1;flex-direction:column;align-items:stretch;justify-content:flex-start;padding:0}
+  .hd.open .nr{padding-bottom:1rem}
+  .hd .sub{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;padding-left:1rem;background:none}
+  .trio{grid-template-columns:1fr 1fr;transform:translateY(40px)}
+  .trio .pol.b{display:none}
+  .split{grid-template-columns:1fr}
+  .half{padding:60px 20px}
+  .tips .top,.bact .wrap,.stain .row{grid-template-columns:1fr;gap:44px}
+  .tips .top img{justify-self:start}
+  .tl{grid-template-columns:1fr;gap:2.4rem}.tl::before{left:27px;right:auto;top:0;bottom:0;width:3px;height:auto;background:repeating-linear-gradient(180deg,var(--slate) 0 10px,transparent 10px 18px)}
+  .step{display:grid;grid-template-columns:56px 1fr;column-gap:1.2rem;padding:0}.step .dot{grid-row:1/3;margin:0}
+  .sw{grid-template-columns:1fr 1fr}
+  .grid3{grid-template-columns:1fr 1fr}
+  .fg{grid-template-columns:1fr 1fr}
 }
 @media (max-width:640px){
   body{font-size:16px}
-  section{padding:70px 0}
-  .top .hide-s{display:none}
-  .top .wrap{font-size:.8rem}.top .live,.top span{white-space:nowrap}
-  .sec-h{grid-template-columns:1fr}.num{font-size:4rem}
-  .collage{height:470px}
-  .c-main,.c-main-wrap{height:320px}
-  .c-small{width:150px;height:150px}
-  .c-card{width:74%}
-  .sticker{width:100px;height:100px;left:0}
-  .f2{grid-template-columns:1fr}
-  .ticket{padding:1.5rem 1.2rem 1.8rem}
-  .ticket::before,.ticket::after{display:none}
-  .tiles{grid-template-columns:1fr}
-  .stats .wrap{grid-template-columns:1fr}.stat{border-left:0!important;border-top:2px dashed rgba(244,237,224,.3)!important;padding:36px 8px}.stat:first-child{border-top:0!important}
-  .fgrid{grid-template-columns:1fr}
-  .bact .ph img{height:320px}.stain .ph img{height:320px}
-  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--tang);border-top:3px solid var(--ink);justify-content:center;padding:.8rem}
-  .callbar a{color:#fff;font:800 1.15rem var(--display);text-decoration:none}
+  .bact .wrap>*,.stain .row>*,.tips .top>*{min-width:0}
+  .bugs{font-size:1.35rem}.bugs s{margin:0 .2rem}
+  section{padding:76px 0}.hero+section{padding-top:110px}
+  .hero{padding-top:56px}
+  .trio{grid-template-columns:1fr 1fr;gap:16px;margin-top:44px}
+  .pol.a img,.pol.c img{height:150px}
+  .pol figcaption{font-size:.74rem}
+  .grid3,.grid2{grid-template-columns:1fr}
+  .form{padding:1.5rem 1.2rem}
+  .sw{grid-template-columns:1fr 1fr}
+  .fg{grid-template-columns:1fr}
+  .also .wrap{flex-direction:column;align-items:flex-start}
+  .also li+li::before{margin-right:1rem}.also ul{gap:.3rem 1rem;font-size:1.15rem}
+  .stain .ph img{height:280px}
+  .stain .ph::before{inset:12px -10px -12px 12px}
+  .stain .ph em{left:-8px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--green);justify-content:center;padding:.85rem}
+  .callbar a{color:#fff;font:800 1.15rem var(--sans);text-decoration:none}
   footer{padding-bottom:64px}
 }
-@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="mark" viewBox="0 0 48 48">
-    <rect x="2" y="2" width="44" height="44" rx="12" fill="#0f6b6b" stroke="#10262b" stroke-width="2.5"/>
-    <path d="M8 18c4-5 8 5 12 0s8 5 12 0 6 2 8 0" fill="none" stroke="#fffdf8" stroke-width="3" stroke-linecap="round"/>
-    <path d="M8 27c4-5 8 5 12 0s8 5 12 0 6 2 8 0" fill="none" stroke="#fffdf8" stroke-width="3" stroke-linecap="round" opacity=".75"/>
-    <path d="M8 36c4-5 8 5 12 0s8 5 12 0 6 2 8 0" fill="none" stroke="#ee6a33" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="24" cy="24" r="22" fill="#496570"/>
+    <path d="M4 30c5-8 9 6 14 0s9 6 14 0 7 4 12 -2v16a22 22 0 0 1-40 0z" fill="#eb1c24" opacity=".0"/>
+    <path d="M10 28c4-5 7 4 11 0s7 4 11 0 5 2 7 0" fill="none" stroke="#fffaf2" stroke-width="3" stroke-linecap="round"/>
+    <path d="M10 35c4-5 7 4 11 0s7 4 11 0 5 2 7 0" fill="none" stroke="#edba8d" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="24" cy="16" r="5" fill="#eb1c24"/>
   </symbol>
 </svg>
 
-<div class="top">
-  <div class="wrap">
-    <span class="live"><i></i> Open 24/7/365</span>
-    <span class="hide-s">Sherwood Park, AB</span>
-    <span>Call Us Today! <a href="tel:+17808094551">(780) 809-4551</a></span>
-  </div>
-</div>
+<div class="strip">Call Us Today! <a href="tel:+17808094551">(780) 809-4551</a> &nbsp;·&nbsp; Open 24/7/365</div>
 
-<header class="nav">
+<header class="hd" id="hd">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Sherwood Park Carpet Cleaning home">
-      <svg><use href="#mark"/></svg>
-      <span><b>Sherwood Park</b><small>Carpet Cleaning</small></span>
-    </a>
-    <button class="burger" aria-label="Menu" aria-expanded="false" onclick="var m=document.getElementById('m');var o=m.classList.toggle('open');this.setAttribute('aria-expanded',o)"><span></span></button>
-    <ul class="menu" id="m">
+    <ul class="nl">
       <li><a href="#top">Home</a></li>
       <li><a href="#services">Services &#9662;</a>
-        <ul class="sub">
-          <li><a href="#carpet">Carpet Cleaning</a></li>
-          <li><a href="#upholstery">Upholstery Cleaning</a></li>
-        </ul>
+        <ul class="sub"><li><a href="#carpet">Carpet Cleaning</a></li><li><a href="#upholstery">Upholstery Cleaning</a></li></ul>
       </li>
       <li><a href="#about">About</a></li>
+    </ul>
+    <a class="logo" href="#top" aria-label="Sherwood Park Carpet Cleaning home"><svg><use href="#mark"/></svg><b>Sherwood Park</b><small>Carpet Cleaning</small></a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('hd').classList.toggle('open')"><span></span></button>
+    <ul class="nr">
       <li><a href="#quote">Contact</a></li>
       <li><a href="#tips">Blog</a></li>
       <li><a href="#privacy">Privacy</a></li>
-      <li><a class="btn btn-p hd" href="#quote">Free Quote</a></li>
+      <li><a class="btn btn-red" style="padding:.7rem 1.2rem;font-size:.92rem" href="#quote">Free Quote</a></li>
     </ul>
   </div>
 </header>
 
 <main id="top">
 
-<!-- HERO -->
 <div class="hero">
-  <div class="wrap">
-    <div>
-      <span class="eyebrow"><i></i> Sherwood Park, Alberta</span>
-      <h1>The Best Carpet Cleaning Service In <em>Sherwood Park<svg viewBox="0 0 300 20" preserveAspectRatio="none"><path d="M3 13c40-9 70 5 110-2s80-7 120-1 52 0 64-3" fill="none" stroke="#ee6a33" stroke-width="6" stroke-linecap="round"/></svg></em>, Alberta Welcomes You!</h1>
-      <p class="lead">Professional carpet cleaners with years of experience, affordable prices and customer service we are proud of. We also clean tile and grout, upholstery, rugs and pet odor.</p>
-      <div class="cta">
-        <a class="btn btn-p" href="#quote">Get my FREE Quote</a>
-        <a class="btn btn-o" href="tel:+17808094551">Call (780) 809-4551</a>
-      </div>
-      <ul class="ticks">
-        <li>Free, no-obligation quote</li>
-        <li>Flexible scheduling</li>
-        <li>Affordable prices</li>
-      </ul>
+  <div class="wrap in">
+    <span class="kicker"><i></i> Sherwood Park, Alberta</span>
+    <h1>The best carpet cleaning in <em>Sherwood Park</em> welcomes you!</h1>
+    <p class="lead">Professional carpet cleaners with years of experience, affordable prices and customer service we are proud of. We also clean tile and grout, upholstery, rugs and pet odor.</p>
+    <div class="cta">
+      <a class="btn btn-red" href="#quote">Get my FREE Quote</a>
+      <a class="btn btn-line" href="tel:+17808094551">Call (780) 809-4551</a>
     </div>
+    <ul class="facts"><li>Free, no-obligation quote</li><li>Flexible scheduling</li><li>Affordable prices</li></ul>
 
-    <div class="collage">
-      <div class="sticker">
-        <svg viewBox="0 0 128 128"><circle cx="64" cy="64" r="62" fill="#cfe6e1" stroke="#10262b" stroke-width="3"/>
-          <defs><path id="cp" d="M64 64m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs>
-          <text font-family="Figtree,sans-serif" font-weight="800" font-size="12.5" letter-spacing="3" fill="#10262b"><textPath href="#cp">OPEN EVERY DAY · ALL NIGHT · </textPath></text></svg>
-        <div class="mid">24/7<br>365</div>
-      </div>
-      <div class="c-main-wrap"></div>
-      <img class="c-main" src="images/1237074_orig.jpg" alt="Clean carpet at home with a pet">
-      <img class="c-small" src="images/3277743.jpg" alt="Baby crawling on a freshly cleaned carpet">
-      <div class="c-card">
-        <h3>What you get</h3>
-        <ul>
-          <li><b>Free</b> no-obligation quote</li>
-          <li><b>Early-morning</b> or later-day appointments</li>
-          <li><b>Steam cleaning</b> equipment</li>
-        </ul>
-      </div>
+    <div class="trio">
+      <figure class="pol a"><img src="images/6441305_orig.jpg" alt="Steam cleaning professional staff"><figcaption>Steam Cleaning Professional Staff</figcaption></figure>
+      <figure class="pol b"><img src="images/1237074_orig.jpg" alt="Affordable price, high quality carpet care"><figcaption>Affordable Price High Quality Carpet Care</figcaption></figure>
+      <figure class="pol c"><img src="images/883668_orig.jpg" alt="Best quality, long lasting clean"><figcaption>Best Quality Long Lasting Clean</figcaption></figure>
     </div>
-  </div>
-</div>
-
-<div class="band" aria-hidden="true">
-  <div class="row">
-    <span>Carpet Cleaning</span><span>Upholstery Cleaning</span><span>Tile &amp; Grout</span><span>Rugs</span><span>Pet Odor</span><span>Stain Removal</span>
-    <span>Carpet Cleaning</span><span>Upholstery Cleaning</span><span>Tile &amp; Grout</span><span>Rugs</span><span>Pet Odor</span><span>Stain Removal</span>
   </div>
 </div>
 
 <!-- SERVICES -->
-<section id="services">
+<section id="services" style="padding-bottom:0">
   <div class="wrap">
-    <div class="sec-h"><span class="num">01</span><h2>Vacuuming and spot cleaning only get you so far.</h2></div>
-    <div class="svc">
-      <article class="card a" id="carpet">
-        <div class="ph"><img src="images/6441305_orig.jpg" alt="Steam carpet cleaning in progress"><b>Service</b></div>
-        <div class="tx">
-          <h3>Carpet Cleaning</h3>
-          <p>We use steam cleaning equipment to bring your carpet back to life, going deeper than a vacuum ever will. Our customers' reviews say the rest.</p>
-        </div>
-      </article>
-      <article class="card b" id="upholstery">
-        <div class="ph"><img src="images/883668_orig.jpg" alt="Soft clean carpet beside a sofa"><b>Service</b></div>
-        <div class="tx">
-          <h3>Upholstery Cleaning</h3>
-          <p>Couches and chairs get cleaned too. We can handle any fibre type.</p>
-        </div>
-      </article>
-      <div class="also">
-        <div class="l">
-          <h3>Also on the list</h3>
-          <ul class="pills"><li>Tile &amp; grout</li><li>Rugs</li><li>Pet odor</li><li>Stain removal</li></ul>
-        </div>
-        <div class="r">
-          <p>We serve Sherwood Park and the surrounding areas. If we can't take your booking, we'll point you to our partner, <a href="https://edmontoncleancarpets.com" target="_blank" rel="noopener">Edmonton Clean Carpets</a>.</p>
-        </div>
-      </div>
-    </div>
+    <div class="sh"><span class="kicker">What we do</span><h2>Vacuuming and spot cleaning only get you so far.</h2></div>
   </div>
 </section>
-
-<!-- STATS -->
-<div class="stats">
+<div class="split">
+  <article class="half l" id="carpet">
+    <div>
+      <span class="no">Service 01</span>
+      <h3>Carpet Cleaning</h3>
+      <p>We use steam cleaning equipment to bring your carpet back to life. Our customers' reviews say the rest.</p>
+    </div>
+    <img src="images/5612196_orig.jpg" alt="Steam cleaning wand on carpet">
+  </article>
+  <article class="half r" id="upholstery">
+    <div>
+      <span class="no">Service 02</span>
+      <h3>Upholstery Cleaning</h3>
+      <p>Couches and chairs get cleaned too. We can handle any fibre type.</p>
+    </div>
+    <img src="images/4854105_orig.jpg" alt="Family relaxing on a sofa and clean carpet">
+  </article>
+</div>
+<div class="also">
   <div class="wrap">
-    <div class="stat"><b>24/7/365</b><span>Open every day of the year</span></div>
-    <div class="stat"><b>FREE</b><span>No-obligation quotes</span></div>
-    <div class="stat"><b>Early &amp; late</b><span>Flexible appointment times</span></div>
-    <div class="stat"><b>Local</b><span>Sherwood Park and surrounding areas</span></div>
+    <ul><li>Tile &amp; grout</li><li>Rugs</li><li>Pet odor</li><li>Stain removal</li></ul>
+    <p>We serve Sherwood Park and the surrounding areas. If we can't take your booking, we'll point you to our partner, <a href="https://edmontoncleancarpets.com" target="_blank" rel="noopener">Edmonton Clean Carpets</a>.</p>
   </div>
 </div>
 
 <!-- TIPS -->
-<section id="tips">
+<section class="tips" id="tips">
   <div class="wrap">
-    <div class="sec-h"><span class="num">02</span><h2>3 things you can do between visits to keep your carpets cleaner.</h2></div>
-    <div class="tips-grid">
-      <div class="tip stitch"><span class="n">1</span><h3>Vacuum weekly</h3><p>Dirt that sits on carpet works deeper into the fibres, gets harder to remove and can let bacteria grow.</p></div>
-      <div class="tip stitch"><span class="n">2</span><h3>Treat stains promptly</h3><p>Dab a stain, don't scrub it. Rubbing only spreads the stain further.</p></div>
-      <div class="tip stitch"><span class="n">3</span><h3>Book regular deep cleans</h3><p>It helps your carpet keep its look for longer and can head off costly emergency call-outs or replacement.</p></div>
+    <div class="top">
+      <div><span class="kicker">Between visits</span><h2 style="font-size:clamp(2rem,4vw,3.3rem);margin-top:.8rem">3 things you can do to keep your carpets cleaner.</h2></div>
+      <img src="images/3277743.jpg" alt="Baby crawling on a clean carpet">
     </div>
-    <div class="tips-foot">
-      <img src="images/4854105_orig.jpg" alt="Family relaxing on a clean carpet">
+    <div class="tl">
+      <div class="step"><span class="dot">1</span><div><h3>Vacuum weekly</h3><p>Dirt that sits on carpet works deeper into the fibres, gets harder to remove and can let bacteria grow.</p></div></div>
+      <div class="step"><span class="dot">2</span><div><h3>Treat stains promptly</h3><p>Dab a stain, don't scrub it. Rubbing only spreads the stain further.</p></div></div>
+      <div class="step"><span class="dot">3</span><div><h3>Book regular deep cleans</h3><p>It helps your carpet keep its look for longer and can head off costly emergency call-outs or replacement.</p></div></div>
     </div>
   </div>
 </section>
@@ -423,18 +339,19 @@ footer a{text-decoration:none}footer a:hover{color:#fff;text-decoration:underlin
 <!-- BACTERIA -->
 <section class="bact" id="bacteria">
   <div class="wrap">
-    <div class="ph">
-      <img src="images/5612196_orig.jpg" alt="Steam cleaning wand moving across carpet">
-      <div class="big"><b>4-6 wks</b><span>Norovirus can survive on carpet fibres</span></div>
+    <div class="giant">
+      <b>4-6</b><span>weeks</span>
+      <p>How long Norovirus can survive on carpet fibres</p>
+      <img src="images/5612196_orig.jpg" alt="Steam cleaning wand on carpet">
     </div>
     <div>
-      <span class="tag">Worth knowing</span>
+      <span class="kicker">Worth knowing</span>
       <h2>Does bacteria actually hide out in your carpet?</h2>
-      <p>Yes, it can. Carpets can collect things like these:</p>
-      <ul class="bugs"><li>Norovirus</li><li>Salmonella</li><li>Campylobacter</li></ul>
+      <p>It can. Carpets can collect things like these:</p>
+      <div class="bugs">Norovirus<s>/</s>Salmonella<s>/</s>Campylobacter</div>
       <p>Norovirus, also called Norwalk virus, is behind stomach flu and other digestive problems. It can live on carpet fibres for four to six weeks and can even become airborne when people walk across the carpet.</p>
       <p>Regular vacuuming and deep cleaning help remove these organisms and keep them from settling in.</p>
-      <p class="src">Source: <a href="https://www.ehow.com" target="_blank" rel="noopener">eHow.com</a></p>
+      <p class="src">Source: <a href="https://www.ehow.com" target="_blank" rel="noopener" style="text-underline-offset:3px">eHow.com</a></p>
     </div>
   </div>
 </section>
@@ -442,21 +359,19 @@ footer a{text-decoration:none}footer a:hover{color:#fff;text-decoration:underlin
 <!-- STAINS -->
 <section class="stain" id="stains">
   <div class="wrap">
-    <div class="ph">
-      <img src="images/discount-carpet-cleaning_orig.jpg" alt="Gloved hand dabbing a stain on carpet">
-      <span class="note">Dab. Don't rub.</span>
+    <div class="sh"><span class="kicker">Stain removal</span><h2>Something spilled on my carpet... what are the best stain removal techniques?</h2></div>
+    <div class="sw">
+      <div class="swatch"><div style="--c:#26408f;--x:40%;--y:45%;--s:34px"></div>Ink stains</div>
+      <div class="swatch"><div style="--c:#a3171d;--x:55%;--y:50%;--s:30px"></div>Blood stains</div>
+      <div class="swatch"><div style="--c:#e07aa6;--x:45%;--y:40%;--s:32px"></div>Nail polish stains</div>
+      <div class="swatch"><div style="--c:#b98a2c;--x:50%;--y:55%;--s:36px"></div>Pet accident stains</div>
     </div>
-    <div>
-      <span class="tag">03 · Stain removal</span>
-      <h2>Something spilled on my carpet... what are the best stain removal techniques?</h2>
-      <p>It's the question we get asked most, and the answer depends on what spilled. Every stain needs its own approach.</p>
-      <div class="tiles">
-        <div><i style="background:#2c4a9a"></i>Ink stains</div>
-        <div><i style="background:#b3261e"></i>Blood stains</div>
-        <div><i style="background:#e58fb0"></i>Nail polish stains</div>
-        <div><i style="background:#c99a3b"></i>Pet accident stains</div>
+    <div class="row">
+      <div>
+        <p>It's the question we get asked most, and the answer depends on what spilled. Every stain needs its own approach.</p>
+        <p>The best move is to call a professional first. If you can't, there are DIY tips at <a href="https://www.clean-organized-family-home.com" target="_blank" rel="noopener">Clean Organized Family Home</a>. And if the DIY route doesn't work out, give us a call.</p>
       </div>
-      <p>The best move is to call a professional first. If you can't, there are DIY tips at <a class="lnk" href="https://www.clean-organized-family-home.com" target="_blank" rel="noopener">Clean Organized Family Home</a>. And if the DIY route doesn't work out, give us a call.</p>
+      <div class="ph"><img src="images/discount-carpet-cleaning_orig.jpg" alt="Gloved hand dabbing a stain on carpet"><em>Dab. Don't rub.</em></div>
     </div>
   </div>
 </section>
@@ -464,43 +379,41 @@ footer a{text-decoration:none}footer a:hover{color:#fff;text-decoration:underlin
 <!-- QUOTE -->
 <section class="quote" id="quote">
   <div class="wrap">
-    <div class="info">
-      <span class="tag">04 · Free quote</span>
-      <h2>Tell us about your rooms and hallways.</h2>
-      <p>Fill in the form for a free, no-obligation quote, or call us any time, day or night.</p>
-      <a class="bigtel" href="tel:+17808094551">(780) 809-4551</a>
+    <div class="head">
+      <span class="kicker">Free quote</span>
+      <h2>Get my FREE Quote!</h2>
+      <p>Tell us about your rooms and hallways. No obligation.</p>
     </div>
-    <form class="ticket" action="#" method="post">
-      <header><h3>Quote request</h3><small>* Indicates required field</small></header>
-      <div class="f2">
+    <form class="form" action="#" method="post">
+      <p class="req">* Indicates required field</p>
+      <div class="grid3">
         <div class="fld"><label for="rooms">Number of Rooms *</label>
           <select id="rooms" name="rooms" required><option value="">Select</option><option>1 Room</option><option>2 Rooms</option><option>3 Rooms</option><option>4 Rooms</option><option>5 Rooms</option><option>6 Rooms</option><option>Other</option></select></div>
         <div class="fld"><label for="halls">Number of Hallways *</label>
           <select id="halls" name="hallways" required><option value="">Select</option><option>1 Hallway</option><option>2 Hallways</option><option>3 Hallways</option><option>4 Hallways</option><option>Other</option></select></div>
+        <div class="fld"><label for="ph">Phone Number *</label><input id="ph" name="phone" type="tel" required autocomplete="tel"></div>
       </div>
-      <div class="f2">
-        <div class="fld"><label for="fn">First name *</label><input id="fn" name="first" required autocomplete="given-name"></div>
-        <div class="fld"><label for="ln">Last name *</label><input id="ln" name="last" required autocomplete="family-name"></div>
-      </div>
-      <div class="f2">
-        <div class="fld"><label for="ph">Phone number *</label><input id="ph" name="phone" type="tel" required autocomplete="tel"></div>
+      <div class="grid3">
+        <div class="fld"><label for="fn">First Name *</label><input id="fn" name="first" required autocomplete="given-name"></div>
+        <div class="fld"><label for="ln">Last Name *</label><input id="ln" name="last" required autocomplete="family-name"></div>
         <div class="fld"><label for="em">Email *</label><input id="em" name="email" type="email" required autocomplete="email"></div>
       </div>
-      <div class="fld"><label for="cm">Additional comments *</label><textarea id="cm" name="comments" required></textarea></div>
-      <button class="btn btn-p" type="submit">Get my FREE Quote!</button>
+      <div class="fld"><label for="cm">Additional Comments *</label><textarea id="cm" name="comments" required></textarea></div>
+      <button class="btn btn-red" type="submit">Get my FREE Quote!</button>
     </form>
+    <div class="callrow">Prefer to talk? We're open 24/7/365.<a href="tel:+17808094551">(780) 809-4551</a></div>
   </div>
 </section>
 
 <!-- CLOSING -->
 <section class="close" id="about">
   <div class="wrap">
-    <h2>What are you waiting for?</h2>
+    <h2>What are you <em>waiting</em> for?</h2>
     <p>We're a small, local business that cares about customer service, good deals and genuine character, and we stand behind our work. Call us and let us do what we do.</p>
     <p>Mention this website when you book and we'll take good care of you.</p>
     <div class="cta">
-      <a class="btn btn-p" href="#quote">Contact Us Today!</a>
-      <a class="btn btn-o" href="tel:+17808094551">(780) 809-4551</a>
+      <a class="btn btn-red" href="#quote">Contact Us Today!</a>
+      <a class="btn btn-green" href="tel:+17808094551">Call (780) 809-4551</a>
     </div>
   </div>
 </section>
@@ -509,24 +422,15 @@ footer a{text-decoration:none}footer a:hover{color:#fff;text-decoration:underlin
 
 <footer>
   <div class="wrap">
-    <div class="fgrid">
+    <div class="fg">
       <div>
-        <a class="brand" href="#top"><svg><use href="#mark"/></svg><span><b>Sherwood Park</b><small>Carpet Cleaning</small></span></a>
+        <a class="logo" href="#top"><svg><use href="#mark"/></svg><b>Sherwood Park</b><small>Carpet Cleaning</small></a>
         <p>Affordable, local carpet and upholstery cleaning for Sherwood Park and the surrounding areas.</p>
-        <div class="fbadge"><img src="images/best-carpet-cleaning-sherwood-park.jpeg" alt="Best in Edmonton badge"></div>
+        <img class="badge" src="images/best-carpet-cleaning-sherwood-park.jpeg" alt="Best in Edmonton badge">
       </div>
-      <div>
-        <h4>Services</h4>
-        <ul><li><a href="#carpet">Carpet Cleaning</a></li><li><a href="#upholstery">Upholstery Cleaning</a></li><li><a href="#stains">Stain Removal</a></li></ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul><li><a href="#top">Home</a></li><li><a href="#about">About</a></li><li><a href="#quote">Contact</a></li><li><a href="#tips">Blog</a></li><li><a id="privacy" href="#privacy">Privacy</a></li></ul>
-      </div>
-      <div>
-        <h4>Get in touch</h4>
-        <ul><li>Sherwood Park, AB</li><li><a href="tel:+17808094551">(780) 809-4551</a></li><li>Open 24/7/365</li></ul>
-      </div>
+      <div><h4>Services</h4><ul><li><a href="#carpet">Carpet Cleaning</a></li><li><a href="#upholstery">Upholstery Cleaning</a></li><li><a href="#stains">Stain Removal</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#top">Home</a></li><li><a href="#about">About</a></li><li><a href="#quote">Contact</a></li><li><a href="#tips">Blog</a></li><li><a id="privacy" href="#privacy">Privacy</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li>Sherwood Park, AB</li><li><a class="fphone" href="tel:+17808094551">(780) 809-4551</a></li><li>Open 24/7/365</li></ul></div>
     </div>
     <div class="legal">
       <span>&copy; 2026 Sherwood Park Carpet Cleaning | All Rights Reserved</span>
