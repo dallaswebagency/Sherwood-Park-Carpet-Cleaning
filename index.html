@@ -63,28 +63,30 @@ li:hover>.sub,li:focus-within>.sub{opacity:1;visibility:visible;transform:none}
 .burger span::before,.burger span::after{content:"";position:absolute;left:0}
 .burger span::before{top:-6px}.burger span::after{top:6px}
 
-/* hero: the old site's sunrise gradient, used full-bleed */
-.hero{background:var(--peach) url(images/Orange-Blue.jpg) center/cover no-repeat;position:relative;padding:84px 0 0;text-align:center}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:140px;background:linear-gradient(transparent,var(--sand))}
-.hero .in{position:relative;z-index:2}
-.hero .kicker{color:var(--slate-d);display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,250,242,.7);padding:.4rem 1rem;border-radius:99px}
-.hero .kicker i{width:9px;height:9px;border-radius:50%;background:var(--green)}
-.hero h1{font-size:clamp(2.5rem,6vw,5.2rem);max-width:15ch;margin:1.3rem auto 0;font-weight:800;color:var(--slate-d)}
-.hero h1 em{font-style:italic;font-weight:600;color:var(--red)}
-.hero p.lead{max-width:40rem;margin:1.5rem auto 2rem;font-size:1.2rem;color:#2a3f47;font-weight:500}
-.hero .cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.facts{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem 2.2rem;margin:2rem 0 0;list-style:none;font-weight:700;font-size:.95rem;color:var(--slate-d)}
-.facts li::before{content:"✓";color:var(--green);font-weight:800;margin-right:.45rem}
-
-.trio{position:relative;z-index:3;display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:34px;align-items:end;margin-top:64px;padding-bottom:0;transform:translateY(60px)}
-.pol{background:var(--paper);padding:12px 12px 14px;box-shadow:0 18px 40px rgba(30,49,57,.3);position:relative}
-.pol img{width:100%;object-fit:cover}
-.pol figcaption{font:700 .86rem var(--sans);padding-top:.7rem;color:var(--slate-d);text-align:center}
-.pol::before{content:"";position:absolute;top:-14px;left:50%;width:90px;height:28px;margin-left:-45px;background:rgba(237,186,141,.85);transform:rotate(-3deg)}
-.pol.a{transform:rotate(-3deg)}.pol.a img{height:250px}
-.pol.b img{height:310px}
-.pol.c{transform:rotate(2.5deg)}.pol.c img{height:250px}
-
+/* hero */
+.hero{position:relative;background:var(--slate-d) url(images/wand.jpg) center/cover no-repeat;color:#fff;padding:90px 0 0}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(30,49,57,.96) 0%,rgba(30,49,57,.82) 45%,rgba(232,164,129,.35) 100%)}
+.hero .wrap{position:relative}
+.hg{display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:center}
+.hero .kicker{color:var(--peach);display:inline-flex;align-items:center;gap:.6rem}
+.hero .kicker i{width:9px;height:9px;border-radius:50%;background:#5fd652}
+.hero h1{font-size:clamp(2.5rem,5.4vw,4.8rem);font-weight:800;margin:1.2rem 0 0;color:#fff}
+.hero h1 em{font-style:italic;font-weight:600;color:var(--peach)}
+.hero p.lead{max-width:36rem;margin:1.5rem 0 2rem;font-size:1.18rem;color:#e6ebec}
+.hero .cta{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-ghost{border-color:rgba(255,255,255,.7);color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--slate-d)}
+.hq{background:var(--paper);color:var(--slate-d);padding:2rem 1.9rem 2rem;border-top:6px solid var(--red);box-shadow:0 28px 60px rgba(0,0,0,.4)}
+.hq h2{font-size:1.9rem}
+.hq p{font-size:.92rem;color:var(--slate);margin:.3rem 0 1.3rem;font-weight:600}
+.hq .g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hq .fld{margin-bottom:14px}
+.hq .btn{width:100%}
+.ribbon{position:relative;display:grid;grid-template-columns:repeat(4,1fr);list-style:none;background:var(--paper);color:var(--slate-d);margin-top:80px;box-shadow:0 18px 40px rgba(0,0,0,.25);transform:translateY(50%)}
+.ribbon li{padding:1.6rem 1.6rem;border-left:1px solid rgba(30,49,57,.15)}
+.ribbon li:first-child{border-left:0}
+.ribbon b{display:block;font:800 1.5rem var(--serif);color:var(--red)}
+.ribbon span{font-size:.92rem;font-weight:600;color:var(--slate)}
 /* sections */
 section{padding:110px 0}
 .hero+section{padding-top:150px}
@@ -119,23 +121,29 @@ section{padding:110px 0}
 .step p{color:#34505a}
 
 /* bacteria */
-.bact{background:var(--peach);border-block:1px solid rgba(30,49,57,.2)}
-.bact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
-.giant{position:relative;text-align:center}
-.giant b{display:block;font:800 clamp(6rem,14vw,11rem)/.85 var(--serif);color:var(--slate-d);letter-spacing:-.05em}
-.giant span{display:block;font:600 italic 2rem var(--serif);color:var(--red);margin-top:.2rem}
-.giant p{font-weight:700;max-width:18rem;margin:1rem auto 0;font-size:.95rem}
-.giant img{width:220px;height:220px;border-radius:50%;object-fit:cover;margin:2.2rem auto 0;border:8px solid var(--paper);box-shadow:0 14px 30px rgba(30,49,57,.25)}
-.bact h2{font-size:clamp(2rem,3.8vw,3.1rem);margin:.8rem 0 1.4rem}
-.bact p{margin-bottom:1rem;color:#2a3f47}
-.bugs{font:700 italic 1.9rem/1.3 var(--serif);color:var(--red);margin:1.2rem 0;border-left:5px solid var(--red);padding-left:1.1rem}
-.bugs s{text-decoration:none;color:var(--slate-d);margin:0 .5rem;font-style:normal}
-.src{font-size:.88rem;opacity:.8}
+.bact{background:var(--slate-d);color:#e6ebec;position:relative;overflow:hidden}
+.bact::before{content:"";position:absolute;right:-180px;top:-180px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(237,186,141,.22),transparent 68%)}
+.bact .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
+.bact .kicker{color:var(--peach)}
+.bact h2{font-size:clamp(2rem,3.8vw,3.2rem);margin:.8rem 0 1.4rem;color:#fff}
+.bact p{margin-bottom:1rem}
+.bugs{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.6rem 0 1.8rem}
+.bugs li{border:1.5px solid rgba(237,186,141,.55);padding:1rem .9rem;font:700 1.25rem var(--serif);color:#fff}
+.bugs i{display:block;font:800 .72rem var(--sans);font-style:normal;letter-spacing:.18em;color:var(--peach);margin-bottom:.4rem}
+.src{font-size:.88rem;opacity:.75}
+.src a{text-underline-offset:3px}
+.bp{position:relative;padding:0 0 3rem 3rem}
+.bp img{width:100%;height:420px;object-fit:cover;border:8px solid var(--paper);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+.seal{position:absolute;left:0;bottom:70px;width:150px;height:150px;border-radius:50%;background:var(--red);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;border:5px solid var(--slate-d);box-shadow:0 0 0 3px var(--peach);transform:rotate(-8deg)}
+.seal b{font:800 2.6rem/1 var(--serif)}
+.seal span{font:700 italic 1.2rem var(--serif)}
+.bp .cap{position:absolute;right:0;bottom:0;left:3rem;margin:0;font-size:.9rem;font-weight:700;color:var(--peach);text-align:right}
 
 /* stains: swatches */
 .sw{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:3.4rem}
 .swatch{background:var(--paper);padding:10px 10px 16px;box-shadow:0 8px 20px rgba(30,49,57,.12);text-align:center;font:700 1.1rem var(--serif)}
-.swatch div{height:130px;margin-bottom:.8rem;background:
+.swatch img{width:100%;height:170px;object-fit:cover;margin-bottom:.8rem}
+.swatch .old{height:130px;margin-bottom:.8rem;background:
   radial-gradient(circle at var(--x) var(--y),var(--c) 0 var(--s),transparent calc(var(--s) + 1px)),
   radial-gradient(circle at calc(var(--x) + 22%) calc(var(--y) + 18%),var(--c) 0 12px,transparent 13px),
   repeating-linear-gradient(45deg,#e4d6c2 0 3px,#ddcdb6 3px 6px)}
@@ -168,6 +176,12 @@ section{padding:110px 0}
 .callrow a{font:800 1.8rem var(--serif);text-decoration:none;display:block;color:var(--peach);margin-top:.2rem}
 
 /* closing */
+.cg{display:grid;grid-template-columns:260px 1fr 260px;gap:50px;align-items:center}
+.pol{background:var(--paper);padding:12px 12px 14px;box-shadow:0 18px 40px rgba(30,49,57,.3);position:relative;margin:0}
+.pol img{width:100%;height:260px;object-fit:cover}
+.pol figcaption{font:700 .85rem var(--sans);padding-top:.7rem;text-align:center}
+.pol::before{content:"";position:absolute;top:-14px;left:50%;width:84px;height:26px;margin-left:-42px;background:rgba(237,186,141,.9);transform:rotate(-3deg)}
+.pl{transform:rotate(-3deg)}.pr{transform:rotate(3deg)}
 .close{background:var(--sand-2);text-align:center}
 .close h2{font-size:clamp(2.6rem,6.4vw,5.4rem);max-width:14ch;margin:0 auto 1.6rem;font-weight:800}
 .close h2 em{font-style:italic;font-weight:600;color:var(--red)}
@@ -198,11 +212,13 @@ footer .badge{width:92px;height:92px;border-radius:6px}
   .hd.open .nl,.hd.open .nr{display:flex;grid-column:1/-1;flex-direction:column;align-items:stretch;justify-content:flex-start;padding:0}
   .hd.open .nr{padding-bottom:1rem}
   .hd .sub{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;padding-left:1rem;background:none}
-  .trio{grid-template-columns:1fr 1fr;transform:translateY(40px)}
-  .trio .pol.b{display:none}
+  .hg{grid-template-columns:1fr;gap:44px}
+  .ribbon{grid-template-columns:1fr 1fr}.ribbon li:nth-child(3){border-left:0}.ribbon li:nth-child(n+3){border-top:1px solid rgba(30,49,57,.15)}
+  .cg{grid-template-columns:1fr}.pol{max-width:300px;margin-inline:auto}
   .split{grid-template-columns:1fr}
   .half{padding:60px 20px}
-  .tips .top,.bact .wrap,.stain .row{grid-template-columns:1fr;gap:44px}
+  .tips .top,.bact .wrap,.stain .row{grid-template-columns:1fr;gap:56px}
+  .bp{padding-left:0}.seal{left:-6px}.bp .cap{left:0}
   .tips .top img{justify-self:start}
   .tl{grid-template-columns:1fr;gap:2.4rem}.tl::before{left:27px;right:auto;top:0;bottom:0;width:3px;height:auto;background:repeating-linear-gradient(180deg,var(--slate) 0 10px,transparent 10px 18px)}
   .step{display:grid;grid-template-columns:56px 1fr;column-gap:1.2rem;padding:0}.step .dot{grid-row:1/3;margin:0}
@@ -216,9 +232,9 @@ footer .badge{width:92px;height:92px;border-radius:6px}
   .bugs{font-size:1.35rem}.bugs s{margin:0 .2rem}
   section{padding:76px 0}.hero+section{padding-top:110px}
   .hero{padding-top:56px}
-  .trio{grid-template-columns:1fr 1fr;gap:16px;margin-top:44px}
-  .pol.a img,.pol.c img{height:150px}
-  .pol figcaption{font-size:.74rem}
+  .hero{padding-top:56px}.ribbon{margin-top:56px}.hq .g2{grid-template-columns:1fr}
+  .bugs{grid-template-columns:1fr}.bp img{height:300px}.seal{width:120px;height:120px}.seal b{font-size:2rem}
+  .swatch img{height:130px}
   .grid3,.grid2{grid-template-columns:1fr}
   .form{padding:1.5rem 1.2rem}
   .sw{grid-template-columns:1fr 1fr}
@@ -262,21 +278,35 @@ footer .badge{width:92px;height:92px;border-radius:6px}
 <main id="top">
 
 <div class="hero">
-  <div class="wrap in">
-    <span class="kicker"><i></i> Sherwood Park, Alberta</span>
-    <h1>The best carpet cleaning in <em>Sherwood Park</em> welcomes you!</h1>
-    <p class="lead">Professional carpet cleaners with years of experience, affordable prices and customer service we are proud of. We also clean tile and grout, upholstery, rugs and pet odor.</p>
-    <div class="cta">
-      <a class="btn btn-red" href="#quote">Get my FREE Quote</a>
-      <a class="btn btn-line" href="tel:+17808094551">Call (780) 809-4551</a>
+  <div class="wrap hg">
+    <div class="ht">
+      <span class="kicker"><i></i> Sherwood Park, Alberta &nbsp;·&nbsp; Open 24/7/365</span>
+      <h1>The best carpet cleaning in <em>Sherwood Park</em> welcomes you!</h1>
+      <p class="lead">Professional carpet cleaners with years of experience, affordable prices and customer service we are proud of. We also clean tile and grout, upholstery, rugs and pet odor.</p>
+      <div class="cta">
+        <a class="btn btn-red" href="#quote">Get my FREE Quote</a>
+        <a class="btn btn-ghost" href="tel:+17808094551">Call (780) 809-4551</a>
+      </div>
     </div>
-    <ul class="facts"><li>Free, no-obligation quote</li><li>Flexible scheduling</li><li>Affordable prices</li></ul>
-
-    <div class="trio">
-      <figure class="pol a"><img src="images/6441305_orig.jpg" alt="Steam cleaning professional staff"><figcaption>Steam Cleaning Professional Staff</figcaption></figure>
-      <figure class="pol b"><img src="images/1237074_orig.jpg" alt="Affordable price, high quality carpet care"><figcaption>Affordable Price High Quality Carpet Care</figcaption></figure>
-      <figure class="pol c"><img src="images/towel.jpg" alt="Best quality, long lasting clean" style="object-position:center 40%"><figcaption>Best Quality Long Lasting Clean</figcaption></figure>
-    </div>
+    <form class="hq" action="#" method="post">
+      <h2>Get my FREE Quote!</h2>
+      <p>Free, no-obligation quote.</p>
+      <div class="g2">
+        <div class="fld"><label for="hr">Rooms *</label><select id="hr" required><option value="">Select</option><option>1 Room</option><option>2 Rooms</option><option>3 Rooms</option><option>4 Rooms</option><option>5 Rooms</option><option>6 Rooms</option><option>Other</option></select></div>
+        <div class="fld"><label for="hh">Hallways *</label><select id="hh" required><option value="">Select</option><option>1 Hallway</option><option>2 Hallways</option><option>3 Hallways</option><option>4 Hallways</option><option>Other</option></select></div>
+      </div>
+      <div class="fld"><label for="hn">Name *</label><input id="hn" required autocomplete="name"></div>
+      <div class="fld"><label for="hp">Phone Number *</label><input id="hp" type="tel" required autocomplete="tel"></div>
+      <button class="btn btn-red" type="submit">Get my FREE Quote!</button>
+    </form>
+  </div>
+  <div class="wrap">
+    <ul class="ribbon">
+      <li><b>24/7/365</b><span>Open every day</span></li>
+      <li><b>Free quote</b><span>No obligation</span></li>
+      <li><b>Flexible</b><span>Early-morning or later-day</span></li>
+      <li><b>Affordable</b><span>High quality carpet care</span></li>
+    </ul>
   </div>
 </div>
 
@@ -293,7 +323,7 @@ footer .badge{width:92px;height:92px;border-radius:6px}
       <h3>Carpet Cleaning</h3>
       <p>We use steam cleaning equipment to bring your carpet back to life. Our customers' reviews say the rest.</p>
     </div>
-    <img src="images/wand.jpg" alt="Steam cleaning wand on carpet">
+    <img src="images/6441305_orig.jpg" alt="Steam cleaning professional staff">
   </article>
   <article class="half r" id="upholstery">
     <div>
@@ -329,19 +359,23 @@ footer .badge{width:92px;height:92px;border-radius:6px}
 <!-- BACTERIA -->
 <section class="bact" id="bacteria">
   <div class="wrap">
-    <div class="giant">
-      <b>4-6</b><span>weeks</span>
-      <p>How long Norovirus can survive on carpet fibres</p>
-      <img src="images/5612196_orig.jpg" alt="Steam cleaning wand on carpet">
-    </div>
     <div>
       <span class="kicker">Worth knowing</span>
       <h2>Does bacteria actually hide out in your carpet?</h2>
       <p>It can. Carpets can collect things like these:</p>
-      <div class="bugs">Norovirus<s>/</s>Salmonella<s>/</s>Campylobacter</div>
+      <ul class="bugs">
+        <li><i>01</i>Norovirus</li>
+        <li><i>02</i>Salmonella</li>
+        <li><i>03</i>Campylobacter</li>
+      </ul>
       <p>Norovirus, also called Norwalk virus, is behind stomach flu and other digestive problems. It can live on carpet fibres for four to six weeks and can even become airborne when people walk across the carpet.</p>
       <p>Regular vacuuming and deep cleaning help remove these organisms and keep them from settling in.</p>
-      <p class="src">Source: <a href="https://www.ehow.com" target="_blank" rel="noopener" style="text-underline-offset:3px">eHow.com</a></p>
+      <p class="src">Source: <a href="https://www.ehow.com" target="_blank" rel="noopener">eHow.com</a></p>
+    </div>
+    <div class="bp">
+      <img src="images/5612196_orig.jpg" alt="Steam cleaning wand moving across carpet">
+      <div class="seal"><b>4-6</b><span>weeks</span></div>
+      <p class="cap">How long Norovirus can survive on carpet fibres</p>
     </div>
   </div>
 </section>
@@ -351,10 +385,10 @@ footer .badge{width:92px;height:92px;border-radius:6px}
   <div class="wrap">
     <div class="sh"><span class="kicker">Stain removal</span><h2>Something spilled on my carpet... what are the best stain removal techniques?</h2></div>
     <div class="sw">
-      <div class="swatch"><div style="--c:#26408f;--x:40%;--y:45%;--s:34px"></div>Ink stains</div>
-      <div class="swatch"><div style="--c:#a3171d;--x:55%;--y:50%;--s:30px"></div>Blood stains</div>
-      <div class="swatch"><div style="--c:#e07aa6;--x:45%;--y:40%;--s:32px"></div>Nail polish stains</div>
-      <div class="swatch"><div style="--c:#b98a2c;--x:50%;--y:55%;--s:36px"></div>Pet accident stains</div>
+      <div class="swatch"><img src="images/stain-ink.jpg" alt="Ink stains">Ink stains</div>
+      <div class="swatch"><img src="images/stain-blood.jpg" alt="Blood stains">Blood stains</div>
+      <div class="swatch"><img src="images/stain-nailpolish.jpg" alt="Nail polish stains">Nail polish stains</div>
+      <div class="swatch"><img src="images/stain-pet.jpg" alt="Pet accident stains">Pet accident stains</div>
     </div>
     <div class="row">
       <div>
@@ -397,7 +431,9 @@ footer .badge{width:92px;height:92px;border-radius:6px}
 
 <!-- CLOSING -->
 <section class="close" id="about">
-  <div class="wrap">
+  <div class="wrap cg">
+    <figure class="pol pl"><img src="images/1237074_orig.jpg" alt="Affordable price, high quality carpet care"><figcaption>Affordable Price High Quality Carpet Care</figcaption></figure>
+    <div class="cm">
     <h2>What are you <em>waiting</em> for?</h2>
     <p>We're a small, local business that cares about customer service, good deals and genuine character, and we stand behind our work. Call us and let us do what we do.</p>
     <p>Mention this website when you book and we'll take good care of you.</p>
@@ -405,6 +441,8 @@ footer .badge{width:92px;height:92px;border-radius:6px}
       <a class="btn btn-red" href="#quote">Contact Us Today!</a>
       <a class="btn btn-green" href="tel:+17808094551">Call (780) 809-4551</a>
     </div>
+    </div>
+    <figure class="pol pr"><img src="images/towel.jpg" alt="Best quality, long lasting clean"><figcaption>Best Quality Long Lasting Clean</figcaption></figure>
   </div>
 </section>
 
